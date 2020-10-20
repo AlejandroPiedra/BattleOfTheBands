@@ -5,6 +5,8 @@ using UnityEngine;
 public class NoteScript : MonoBehaviour
 {
     public bool pressed;
+    public KeyCode keyToPress;
+
     void Start()
     {
         
@@ -13,7 +15,13 @@ public class NoteScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(keyToPress))
+        {
+            if (pressed)
+            {
+                gameObject.SetActive(false);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

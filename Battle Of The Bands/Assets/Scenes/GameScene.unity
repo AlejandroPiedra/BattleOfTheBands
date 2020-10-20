@@ -168,8 +168,9 @@ GameObject:
   - component: {fileID: 565746231}
   - component: {fileID: 565746232}
   - component: {fileID: 565746233}
+  - component: {fileID: 565746234}
   m_Layer: 0
-  m_Name: Button_2
+  m_Name: Green_Button
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,6 +282,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!50 &565746234
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565746229}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &853853116
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,8 +315,9 @@ GameObject:
   - component: {fileID: 853853118}
   - component: {fileID: 853853119}
   - component: {fileID: 853853120}
+  - component: {fileID: 853853121}
   m_Layer: 0
-  m_Name: Button_3
+  m_Name: Red_Button
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,6 +429,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!50 &853853121
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853853116}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &875170849
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +496,7 @@ GameObject:
   - component: {fileID: 1000338067}
   - component: {fileID: 1000338069}
   - component: {fileID: 1000338068}
+  - component: {fileID: 1000338070}
   m_Layer: 0
   m_Name: Note
   m_TagString: Untagged
@@ -510,8 +555,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1305462289
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4775c5bd3f5681b4a80d55ab3e515764, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -554,6 +599,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tempo: 120
   startGame: 0
+--- !u!114 &1000338070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000338065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32627c10928e00d44ac40a48c4ae40e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressed: 0
+  keyToPress: 113
 --- !u!1 &1120529084
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +625,7 @@ GameObject:
   - component: {fileID: 1120529088}
   - component: {fileID: 1120529087}
   - component: {fileID: 1120529086}
+  - component: {fileID: 1120529089}
   m_Layer: 0
   m_Name: Note (2)
   m_TagString: Untagged
@@ -654,8 +714,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1305462289
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4775c5bd3f5681b4a80d55ab3e515764, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -668,6 +728,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1120529089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120529084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32627c10928e00d44ac40a48c4ae40e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressed: 0
+  keyToPress: 101
 --- !u!1 &1642511168
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,8 +754,9 @@ GameObject:
   - component: {fileID: 1642511170}
   - component: {fileID: 1642511171}
   - component: {fileID: 1642511172}
+  - component: {fileID: 1642511173}
   m_Layer: 0
-  m_Name: Button_4
+  m_Name: Yellow_Button
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -793,6 +868,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!50 &1642511173
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642511168}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1659211570
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,8 +901,9 @@ GameObject:
   - component: {fileID: 1659211572}
   - component: {fileID: 1659211573}
   - component: {fileID: 1659211574}
+  - component: {fileID: 1659211575}
   m_Layer: 0
-  m_Name: Button_1
+  m_Name: Blue_Button
   m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -918,6 +1015,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!50 &1659211575
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659211570}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1779801345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,6 +1131,7 @@ GameObject:
   - component: {fileID: 2105796311}
   - component: {fileID: 2105796310}
   - component: {fileID: 2105796309}
+  - component: {fileID: 2105796312}
   m_Layer: 0
   m_Name: Note (1)
   m_TagString: Untagged
@@ -1101,8 +1220,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1305462289
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4775c5bd3f5681b4a80d55ab3e515764, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1115,3 +1234,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2105796312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105796307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32627c10928e00d44ac40a48c4ae40e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressed: 0
+  keyToPress: 119
