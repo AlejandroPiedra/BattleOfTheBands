@@ -24,7 +24,7 @@ public class NoteScroller : MonoBehaviour
         }
         else
         {
-            transform.position -= new Vector3(0f, tempo * Time.deltaTime, 0f);
+            transform.position -= new Vector3(tempo * Time.deltaTime, 0f, 0f);
         }
     }
 }
