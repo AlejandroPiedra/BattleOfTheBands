@@ -23,8 +23,7 @@ public class GameManager : MonoBehaviour
             {
                 startPlaying = true;
                 noteScroller.startGame = true;
-
-                song.Play();
+                //song.Play();
             }
         }
     }
