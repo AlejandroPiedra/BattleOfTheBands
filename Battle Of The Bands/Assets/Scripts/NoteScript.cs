@@ -7,12 +7,6 @@ public class NoteScript : MonoBehaviour
     public bool pressed;
     public KeyCode keyToPress;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(keyToPress))
@@ -20,6 +14,7 @@ public class NoteScript : MonoBehaviour
             if (pressed)
             {
                 gameObject.SetActive(false);
+
             }
         }
     }

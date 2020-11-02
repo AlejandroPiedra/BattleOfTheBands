@@ -12,19 +12,11 @@ public class NoteScroller : MonoBehaviour
         tempo = tempo / 60f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (!startGame)
+        if (startGame)
         {
-            if (Input.anyKeyDown)
-            {
-                startGame = true;
-            }
-        }
-        else
-        {
-            transform.position -= new Vector3(tempo * Time.deltaTime, 0f, 0f);
+            transform.position -= new Vector3(0f, tempo * Time.deltaTime, 0f);
         }
     }
 }

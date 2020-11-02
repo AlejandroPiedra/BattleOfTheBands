@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
     private SpriteRenderer buttonSprite;
+    private bool hit;
     public Sprite defaultImage;
     public Sprite pressedImage;
     public KeyCode keyPressed;
@@ -25,4 +27,5 @@ public class ButtonController : MonoBehaviour
             buttonSprite.sprite = defaultImage;
         }
     }
+
 }
