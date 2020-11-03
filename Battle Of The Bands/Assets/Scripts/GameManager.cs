@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
     public AudioSource song;
     public bool startPlaying;
     public NoteScroller noteScroller;
-    
 
     void Start()
     {
