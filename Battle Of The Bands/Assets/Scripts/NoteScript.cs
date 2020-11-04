@@ -5,25 +5,35 @@ using UnityEngine;
 public class NoteScript : MonoBehaviour
 {
     public bool pressed;
-    public KeyCode keyToPress;
+    public ButtonController button;
+    public SpriteRenderer sprite;
+
+    private void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+        sprite.enabled = false;
+    }
 
     void Update()
     {
-        if (Input.GetKeyDown(keyToPress))
+        if (Input.GetKeyDown(button.keyPressed))
         {
             if (pressed)
             {
                 gameObject.SetActive(false);
-
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Button")
+        if (collision.tag == "Button")
         {
             pressed = true;
+        }
+        if(collision.tag == "ShowNote")
+        {
+            sprite.enabled = true;
         }
     }
 

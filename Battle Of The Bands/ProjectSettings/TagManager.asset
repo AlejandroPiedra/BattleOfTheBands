@@ -8,6 +8,7 @@ TagManager:
   - Note
   - Player1
   - Player2
+  - ShowNote
   layers:
   - Default
   - TransparentFX

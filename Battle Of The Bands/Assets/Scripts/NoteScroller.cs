@@ -5,7 +5,7 @@ using UnityEngine;
 public class NoteScroller : MonoBehaviour
 {
     public float tempo;
-    public bool startGame;
+    public bool startScroll;
 
     void Start()
     {
@@ -14,7 +14,7 @@ public class NoteScroller : MonoBehaviour
 
     void Update()
     {
-        if (startGame)
+        if (startScroll)
         {
             transform.position -= new Vector3(0f, tempo * Time.deltaTime, 0f);
         }
