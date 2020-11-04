@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressed: 0
   button: {fileID: 0}
-  sprite: {fileID: 0}
+  sprite: {fileID: 3094001245461471386}
 --- !u!58 &3094001245461471365
 CircleCollider2D:
   m_ObjectHideFlags: 0

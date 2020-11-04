@@ -6,7 +6,7 @@ public class NoteScript : MonoBehaviour
 {
     public bool pressed;
     public ButtonController button;
-    public SpriteRenderer sprite;
+    private SpriteRenderer sprite;
 
     private void Start()
     {

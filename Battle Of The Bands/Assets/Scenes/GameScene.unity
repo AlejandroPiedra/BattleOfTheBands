@@ -266,7 +266,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58581572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: 0}
+  m_LocalPosition: {x: 0, y: -0.72, z: 0}
   m_LocalScale: {x: 9.997701, y: 0.14046875, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1850,6 +1850,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1247016695}
     m_Modifications:
+    - target: {fileID: 5664630980135027487, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7324898226679520776, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.4759998
@@ -2001,6 +2005,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5664630980135027487, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7324898226679520776, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.419
@@ -2078,6 +2086,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1247016695}
     m_Modifications:
+    - target: {fileID: 5664630980135027487, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7324898226679520776, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5019999
@@ -2873,7 +2885,7 @@ MonoBehaviour:
   - {fileID: 1209173983}
   - {fileID: 705548803}
   enemyPlayer: {fileID: 1569566858}
-  HP: {fileID: 1788990716}
+  healthDisplay: {fileID: 1788990716}
 --- !u!1 &1569566856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2926,7 +2938,7 @@ MonoBehaviour:
   - {fileID: 2022903994}
   - {fileID: 647298014}
   enemyPlayer: {fileID: 1560459257}
-  HP: {fileID: 1906166824}
+  healthDisplay: {fileID: 1906166824}
 --- !u!1 &1589295303
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,6 +3160,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1247016695}
     m_Modifications:
+    - target: {fileID: 5664630980135027487, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7324898226679520776, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.409
@@ -3598,6 +3614,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1247016695}
     m_Modifications:
+    - target: {fileID: 5664630980135027487, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7324898226679520776, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.58
@@ -3675,6 +3695,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 875170850}
     m_Modifications:
+    - target: {fileID: 5664630980135027487, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7324898226679520776, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.52
@@ -4078,6 +4102,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 875170850}
     m_Modifications:
+    - target: {fileID: 5664630980135027487, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7324898226679520776, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.592
@@ -4291,6 +4319,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 875170850}
     m_Modifications:
+    - target: {fileID: 5664630980135027487, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7324898226679520776, guid: 3d7be2e41770eb04b9c5a62c5c058ee0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.49

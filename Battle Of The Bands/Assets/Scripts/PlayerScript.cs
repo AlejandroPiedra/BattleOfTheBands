@@ -9,11 +9,11 @@ public class PlayerScript : MonoBehaviour
     public int damageStack = 1;
     public ButtonController[] buttons;
     public PlayerScript enemyPlayer;
-    public Text HP;
+    public Text healthDisplay;
     
     void Start()
     {
-        HP.text = "HP: " + health;
+        healthDisplay.text = "HP: " + health;
     }
 
  
@@ -26,12 +26,12 @@ public class PlayerScript : MonoBehaviour
                 if (button.noteHit)
                 {
                     enemyPlayer.health -= 1;
-                    enemyPlayer.HP.text = "HP: " + enemyPlayer.health;
+                    enemyPlayer.healthDisplay.text = "HP: " + enemyPlayer.health;
                 }
                 else
                 {
                     health -= 1;
-                    HP.text = "HP: " + health;
+                    healthDisplay.text = "HP: " + health;
                 }
             }
         }

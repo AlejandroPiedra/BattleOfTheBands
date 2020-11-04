@@ -11,9 +11,12 @@ public class GameScript : MonoBehaviour
     public PlayerScript p2;
 
 
+    //Set Up Game Screen
     void Start()
     {
-       
+        //Get Both Players Band
+        //Get the Song (Depending on the Bands chosen)
+        //Set Up the Songs notes for both players
     }
 
     void Update()
