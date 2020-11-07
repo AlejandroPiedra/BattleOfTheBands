@@ -33,17 +33,17 @@ public class GameScript : MonoBehaviour
         }
 
         //Check For a Solo
-        if (!song.isPlaying)
-        {
-            if(p1.health > p2.health)
-            {
-                //P1 Solo
-            }
-            if (p2.health > p1.health)
-            {
-                //P2 Solo
-            }
-        }
+        //if (!song.isPlaying)
+        //{
+        //    if(p1.health > p2.health)
+        //    {
+        //        //P1 Solo
+        //    }
+        //    if (p2.health > p1.health)
+        //    {
+        //        //P2 Solo
+        //    }
+        //}
 
         //Check Win/Loss
         if(p1.health <= 0)

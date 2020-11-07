@@ -6,11 +6,11 @@ using UnityEngine;
 public class ButtonController : MonoBehaviour
 {
     private SpriteRenderer buttonSprite;
-    private CircleCollider2D hitBox;
     public Sprite defaultImage;
     public Sprite pressedImage;
     public KeyCode keyPressed;
-    public bool noteHit = false;
+    public bool noteHit;
+    public bool noteMiss;
 
     void Start()
     {
@@ -34,6 +34,7 @@ public class ButtonController : MonoBehaviour
      *  else
      *  When the note exits the collider and its not active, Subtract 1 hp from the other player (This means the note was hit during the collision window)
      */
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (!collision.gameObject.activeSelf)
@@ -43,6 +44,7 @@ public class ButtonController : MonoBehaviour
         else
         {
             noteHit = false;
+            noteMiss = true;
             collision.gameObject.SetActive(false);
         }
     }
