@@ -35,6 +35,12 @@ public class ButtonController : MonoBehaviour
      *  When the note exits the collider and its not active, Subtract 1 hp from the other player (This means the note was hit during the collision window)
      */
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        noteHit = true;
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (!collision.gameObject.activeSelf)

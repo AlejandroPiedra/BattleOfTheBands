@@ -55,6 +55,9 @@ public class PlayerScript : MonoBehaviour
             if (button.noteMiss)
             {
                 button.noteMiss = false;
+                multiplierTracker = 0;
+                damageMultiplier = 1;
+                comboDisplay.text = "x" + damageMultiplier;
                 health -= 1;
                 healthDisplay.text = "HP: " + health;
             }

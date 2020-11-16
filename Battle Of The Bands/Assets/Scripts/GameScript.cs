@@ -12,8 +12,7 @@ public class GameScript : MonoBehaviour
     public PlayerScript p2;
     public RectTransform gameOverPanel;
     public Text gameOverText;
-    public Button gameOverButton;
-    public int soloNoteCounter = 25;
+    public int soloNoteCounter;
 
 
     //Set Up Game Screen
@@ -37,40 +36,45 @@ public class GameScript : MonoBehaviour
             }
         }
 
-        //Check For a Solo
-        if (!song.isPlaying)
-        {
-            if(p1.health > p2.health)
-            {
-                song.Stop();
-                noteScroller.startScroll = false;
-                Solo(p1);
-            }
-            if (p2.health > p1.health)
-            {
-                //P2 Solo
-            }
-        }
-
         //Check Win/Loss
-        if(p1.health <= 0)
+        if (p1.health <= 0)
         {
+            gameOverText.text = "Player 2 Rocks!!";
             SetUpWin();
-            gameOverText.text = "Player 1 Rocks!!";
         }
         if (p2.health <= 0)
         {
+            gameOverText.text = "Player 1 Rocks!!";
             SetUpWin();
-            gameOverText.text = "Player 2 Rocks!!";
+        }
+
+        //Check For a Solo
+        if (!song.isPlaying)
+        {
+            if(p1.health > 0 && p2.health > 0)
+            {
+                if (p1.health > p2.health)
+                {
+                    Solo(p1);
+                }
+                if (p2.health > p1.health)
+                {
+                    Solo(p2);
+                }
+            }
         }
     }
 
     private void Solo(PlayerScript player)
     {
+        player.gameObject.SetActive(false);
+        SetUpWin();
+        gameOverText.color = Color.red;
+        gameOverText.text =  player.tag + " SOLO!!!";
         if(soloNoteCounter <= 0)
         {
-            gameOverText.text = player.tag + " Rocks";
-            SetUpWin();
+            gameOverText.color = Color.white;
+            gameOverText.text = player.tag + " ROCKS!!!";
         }
         foreach (ButtonController button in player.buttons)
         {
