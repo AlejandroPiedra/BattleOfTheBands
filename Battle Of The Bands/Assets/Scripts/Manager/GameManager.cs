@@ -3,19 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameScript : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public AudioSource song;
+    public GameScriptableObject game;
     public bool startPlaying;
     public NoteScroller noteScroller;
-    public PlayerScript p1;
-    public PlayerScript p2;
     public RectTransform gameOverPanel;
     public Text gameOverText;
     public int soloNoteCounter;
 
-
-    //Set Up Game Screen
     void Start()
     {
         //Get Both Players Band
@@ -32,34 +28,34 @@ public class GameScript : MonoBehaviour
             {
                 startPlaying = true;
                 noteScroller.startScroll = true;
-                song.Play();
+                game.song.Play();
             }
         }
 
         //Check Win/Loss
-        if (p1.health <= 0)
+        if (game.player1.health <= 0)
         {
             gameOverText.text = "Player 2 Rocks!!";
             SetUpWin();
         }
-        if (p2.health <= 0)
+        if (game.player2.health <= 0)
         {
             gameOverText.text = "Player 1 Rocks!!";
             SetUpWin();
         }
 
         //Check For a Solo
-        if (!song.isPlaying)
+        if (!game.song.isPlaying)
         {
-            if(p1.health > 0 && p2.health > 0)
+            if(game.player1.health > 0 && game.player2.health > 0)
             {
-                if (p1.health > p2.health)
+                if (game.player1.health > game.player2.health)
                 {
-                    Solo(p1);
+                    Solo(game.player1);
                 }
-                if (p2.health > p1.health)
+                if (game.player2.health > game.player1.health)
                 {
-                    Solo(p2);
+                    Solo(game.player2);
                 }
             }
         }
@@ -67,6 +63,7 @@ public class GameScript : MonoBehaviour
 
     private void Solo(PlayerScript player)
     {
+        
         player.gameObject.SetActive(false);
         SetUpWin();
         gameOverText.color = Color.red;
@@ -87,7 +84,7 @@ public class GameScript : MonoBehaviour
 
     private void SetUpWin()
     {
-        song.Stop();
+        game.song.Stop();
         noteScroller.startScroll = false;
         gameOverPanel.gameObject.SetActive(true);
     }

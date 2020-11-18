@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
+    enum Band
+    {
+        NORTHAMERICA = 0,
+        SOUTHAMERICA = 1,
+        ASIA = 2
+    }
+
     public ButtonController[] buttons;
     public PlayerScript enemyPlayer;
     public int health;
@@ -13,6 +20,7 @@ public class PlayerScript : MonoBehaviour
     public int[] multiplierArray;
     public Text healthDisplay;
     public Text comboDisplay;
+    Band myBand;
     
     void Start()
     {
@@ -64,5 +72,19 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-
+    public void SetBand(int num)
+    {
+        if(num == 0)
+        {
+            myBand = Band.NORTHAMERICA;
+        }
+        if(num == 1)
+        {
+            myBand = Band.SOUTHAMERICA;
+        }
+        if(num == 2)
+        {
+            myBand = Band.ASIA;
+        }
+    }
 }
