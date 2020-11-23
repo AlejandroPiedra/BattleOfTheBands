@@ -505,31 +505,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 510392662}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1787680745}
-        m_TargetAssemblyTypeName: BandManager, Assembly-CSharp
-        m_MethodName: ChooseBandP1
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1787680745}
-        m_TargetAssemblyTypeName: BandManager, Assembly-CSharp
-        m_MethodName: ChooseBandP2
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &510392662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,24 +628,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1787680745}
         m_TargetAssemblyTypeName: BandManager, Assembly-CSharp
-        m_MethodName: ChooseBandP1
+        m_MethodName: SetUpBand
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1787680745}
-        m_TargetAssemblyTypeName: BandManager, Assembly-CSharp
-        m_MethodName: ChooseBandP2
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -721,6 +685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 683692794}
+  - component: {fileID: 683692795}
   m_Layer: 0
   m_Name: Player 2
   m_TagString: Untagged
@@ -742,6 +707,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &683692795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683692793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95dd7c7f3dcd66d46963da48a3688904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  payerBand: 0
+  button1: 117
+  button2: 105
+  button3: 111
+  button4: 112
 --- !u!1 &940234065
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,6 +734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 940234066}
+  - component: {fileID: 940234067}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Untagged
@@ -772,6 +756,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &940234067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940234065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95dd7c7f3dcd66d46963da48a3688904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  payerBand: 0
+  button1: 113
+  button2: 119
+  button3: 101
+  button4: 114
 --- !u!1 &989098413
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,18 +935,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1787680745}
-        m_TargetAssemblyTypeName: BandManager, Assembly-CSharp
-        m_MethodName: ChooseBandP1
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1787680745}
         m_TargetAssemblyTypeName: BandManager, Assembly-CSharp
         m_MethodName: ChooseBandP2
@@ -1412,8 +1402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 11400000, guid: de13d1d6087e17f4497173a53372d2cb, type: 2}
-  p1: {fileID: 0}
-  p2: {fileID: 0}
+  p1: {fileID: 940234067}
+  p2: {fileID: 683692795}
   selectText: {fileID: 1824143232}
 --- !u!1 &1824143230
 GameObject:

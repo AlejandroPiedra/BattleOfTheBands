@@ -11,12 +11,11 @@ public class GameManager : MonoBehaviour
     public RectTransform gameOverPanel;
     public Text gameOverText;
     public int soloNoteCounter;
+    public ButtonController[] buttons;
 
     void Start()
     {
-        //Get Both Players Band
-        //Get the Song (Depending on the Bands chosen)
-        //Set Up the Songs notes for both players
+        
     }
 
     void Update()
@@ -73,13 +72,13 @@ public class GameManager : MonoBehaviour
             gameOverText.color = Color.white;
             gameOverText.text = player.tag + " ROCKS!!!";
         }
-        foreach (ButtonController button in player.buttons)
-        {
-            if (Input.GetKeyDown(button.keyPressed))
-            {
-                soloNoteCounter -= 1;
-            }
-        }
+        //foreach (ButtonController button in player.buttons)
+        //{
+        //    if (Input.GetKeyDown(button.keyPressed))
+        //    {
+        //        soloNoteCounter -= 1;
+        //    }
+        //}
     }
 
     private void SetUpWin()
