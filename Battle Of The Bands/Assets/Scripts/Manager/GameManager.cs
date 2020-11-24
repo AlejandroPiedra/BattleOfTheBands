@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
     }
 
     void Update()
@@ -141,7 +140,7 @@ public class GameManager : MonoBehaviour
             {
                 if (game.player1.health > game.player2.health)
                 {
-                    //Solo(game.player1);
+                   //Solo(game.player1);
                 }
                 if (game.player2.health > game.player1.health)
                 {
@@ -162,13 +161,26 @@ public class GameManager : MonoBehaviour
             gameOverText.color = Color.white;
             gameOverText.text = player.tag + " ROCKS!!!";
         }
-        //foreach (ButtonController button in player.buttons)
-        //{
-        //    if (Input.GetKeyDown(button.keyPressed))
-        //    {
-        //        soloNoteCounter -= 1;
-        //    }
-        //}
+        if (player.tag == "Player1")
+        {
+            foreach (ButtonController button in p1buttons)
+            {
+                if (Input.GetKeyDown(button.keyPressed))
+                {
+                    soloNoteCounter -= 1;
+                }
+            }
+        }
+        if (player.tag == "Player2")
+        {
+            foreach (ButtonController button in p2buttons)
+            {
+                if (Input.GetKeyDown(button.keyPressed))
+                {
+                    soloNoteCounter -= 1;
+                }
+            }
+        }
     }
 
     private void SetUpWin()
