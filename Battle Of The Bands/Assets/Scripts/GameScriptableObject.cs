@@ -7,5 +7,4 @@ public class GameScriptableObject : ScriptableObject
 {
     public PlayerScript player1;
     public PlayerScript player2;
-    public AudioSource song;
 }

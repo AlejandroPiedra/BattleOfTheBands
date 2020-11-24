@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8382b780b4cf2f241933396e342ac4d1, type: 3}
   m_Name: Game
   m_EditorClassIdentifier: 
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  song: {fileID: 0}
+  speed: 50

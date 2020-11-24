@@ -21,28 +21,34 @@ public class BandManager : MonoBehaviour
 
     void Update()
     {
+        if (game.player1.playerBand != PlayerScript.Band.NONE && game.player2.playerBand == PlayerScript.Band.NONE)
+        {
+            selectText.text = "P2 Chose A Band";
+        }
+
         if (game.player1.playerBand == PlayerScript.Band.ASIA && game.player2.playerBand == PlayerScript.Band.NORTHAMERICA)
         {
-            //Set Song
-            SceneManager.LoadScene(5);
+            
+            //SceneManager.LoadScene(5);
+            SceneManager.LoadScene(1);
         }
-        if (game.player1.playerBand == PlayerScript.Band.ASIA && game.player2.playerBand == PlayerScript.Band.SOUTHAMERICA)
+        else if (game.player1.playerBand == PlayerScript.Band.ASIA && game.player2.playerBand == PlayerScript.Band.SOUTHAMERICA)
         {
             SceneManager.LoadScene(6);
         }
-        if (game.player1.playerBand == PlayerScript.Band.NORTHAMERICA && game.player2.playerBand == PlayerScript.Band.ASIA)
+        else if (game.player1.playerBand == PlayerScript.Band.NORTHAMERICA && game.player2.playerBand == PlayerScript.Band.ASIA)
         {
             SceneManager.LoadScene(7);
         }
-        if (game.player1.playerBand == PlayerScript.Band.NORTHAMERICA && game.player2.playerBand == PlayerScript.Band.SOUTHAMERICA)
+        else if (game.player1.playerBand == PlayerScript.Band.NORTHAMERICA && game.player2.playerBand == PlayerScript.Band.SOUTHAMERICA)
         {
             SceneManager.LoadScene(4);
         }
-        if (game.player1.playerBand == PlayerScript.Band.SOUTHAMERICA && game.player2.playerBand == PlayerScript.Band.ASIA)
+        else if (game.player1.playerBand == PlayerScript.Band.SOUTHAMERICA && game.player2.playerBand == PlayerScript.Band.ASIA)
         {
             SceneManager.LoadScene(8);
         }
-        if (game.player1.playerBand == PlayerScript.Band.NORTHAMERICA && game.player2.playerBand == PlayerScript.Band.NORTHAMERICA)
+        else if (game.player1.playerBand == PlayerScript.Band.NORTHAMERICA && game.player2.playerBand == PlayerScript.Band.NORTHAMERICA)
         {
             SceneManager.LoadScene(9);
         }
@@ -50,6 +56,13 @@ public class BandManager : MonoBehaviour
 
     public void SetUpBand(int num)
     {
-
+        if (game.player1.playerBand == PlayerScript.Band.NONE)
+        {
+            game.player1.SetBand(num);
+        }
+        else if (game.player1.playerBand != PlayerScript.Band.NONE && game.player2.playerBand == PlayerScript.Band.NONE)
+        {
+            game.player2.SetBand(num);
+        }
     }
 }

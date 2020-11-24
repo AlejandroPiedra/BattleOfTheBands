@@ -7,13 +7,14 @@ public class PlayerScript : MonoBehaviour
 {
     public enum Band
     {
+        NONE,
         NORTHAMERICA,
         SOUTHAMERICA,
         ASIA
     }
 
     public int health;
-    public Band playerBand;
+    public Band playerBand = Band.NONE;
     public KeyCode button1;
     public KeyCode button2;
     public KeyCode button3;
@@ -21,7 +22,6 @@ public class PlayerScript : MonoBehaviour
 
     public void SetBand(int num)
     {
-
         if (num == 0)
         {
             playerBand = Band.NORTHAMERICA;
