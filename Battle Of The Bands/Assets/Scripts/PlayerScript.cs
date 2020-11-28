@@ -15,10 +15,6 @@ public class PlayerScript : MonoBehaviour
 
     public int health;
     public Band playerBand = Band.NONE;
-    public KeyCode button1;
-    public KeyCode button2;
-    public KeyCode button3;
-    public KeyCode button4;
 
     public void SetBand(int num)
     {

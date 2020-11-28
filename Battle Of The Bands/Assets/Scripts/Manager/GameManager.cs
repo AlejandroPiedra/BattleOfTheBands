@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public int soloNoteCounter;
     public ButtonController[] p1buttons;
     public ButtonController[] p2buttons;
+    public PlayerScript player1;
+    public PlayerScript player2;
 
     public int p1damageMultiplier;
     public int p1multiplierTracker;
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        game.player1 = player1;
+        game.player2 = player2;
     }
 
     void Update()
@@ -140,11 +144,11 @@ public class GameManager : MonoBehaviour
             {
                 if (game.player1.health > game.player2.health)
                 {
-                   //Solo(game.player1);
+                   Solo(game.player1);
                 }
                 if (game.player2.health > game.player1.health)
                 {
-                    //Solo(game.player2);
+                    Solo(game.player2);
                 }
             }
         }
