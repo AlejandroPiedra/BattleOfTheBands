@@ -13,7 +13,7 @@ public class PlayerScript : MonoBehaviour
         ASIA
     }
 
-    public int health;
+    public float health;
     public Band playerBand = Band.NONE;
 
     public void SetBand(int num)
