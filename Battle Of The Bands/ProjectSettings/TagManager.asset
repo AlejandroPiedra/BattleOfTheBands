@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Button
+  - Note
+  - Player1
+  - Player2
+  - ShowNote
+  - MissNote
   layers:
   - Default
   - TransparentFX
@@ -40,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Note Layer
+    uniqueID: 2989505007
+    locked: 0
+  - name: New Layer
+    uniqueID: 811695059
     locked: 0
