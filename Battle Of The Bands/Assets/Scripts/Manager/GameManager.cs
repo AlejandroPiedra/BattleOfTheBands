@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public NoteScroller noteScroller;
     public RectTransform gameOverPanel;
     public Text gameOverText;
-    public float soloNoteCounter;
+    public Button gameOverButton;
     public ButtonController[] p1buttons;
     public ButtonController[] p2buttons;
     public PlayerScript player1;
@@ -133,12 +133,16 @@ public class GameManager : MonoBehaviour
         //Check Win/Loss
         if (game.player1.health <= 0)
         {
-            gameOverText.text = "Player 2 Rocks!!";
+            gameOverText.color = Color.white;
+            gameOverText.text = "Player 2 Rocks!!!";
+            gameOverButton.gameObject.SetActive(true);
             SetUpWin();
         }
         if (game.player2.health <= 0)
         {
-            gameOverText.text = "Player 1 Rocks!!";
+            gameOverText.color = Color.white;
+            gameOverButton.gameObject.SetActive(true);
+            gameOverText.text = "Player 1 Rocks!!!";
             SetUpWin();
         }
 
@@ -165,17 +169,9 @@ public class GameManager : MonoBehaviour
     {
         SetUpWin();
         gameOverText.color = Color.red;
-        gameOverText.text = player.tag + " SOLO!!!";
-
-        if (soloNoteCounter <= 0.0f)
-        {
-            gameOverText.color = Color.white;
-            gameOverText.text = player.tag + " ROCKS!!!";
-        }
-
+        gameOverText.text = player.tag + " SOLO THEM!!!";
         if (player.tag == "Player1")
         {
-            soloNoteCounter = game.player2.health;
             foreach (ButtonController button in p1buttons)
             {
                 if (Input.GetKeyDown(button.keyPressed))
@@ -188,7 +184,6 @@ public class GameManager : MonoBehaviour
 
         if (player.tag == "Player2")
         {
-            soloNoteCounter = game.player1.health;
             foreach (ButtonController button in p2buttons)
             {
                 if (Input.GetKeyDown(button.keyPressed))
@@ -202,6 +197,7 @@ public class GameManager : MonoBehaviour
 
     private void SetUpWin()
     {
+        gameOver = true;
         song.Stop();
         noteScroller.startScroll = false;
         gameOverPanel.gameObject.SetActive(true);
