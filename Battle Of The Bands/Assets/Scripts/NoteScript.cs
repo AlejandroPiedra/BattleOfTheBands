@@ -7,6 +7,7 @@ public class NoteScript : MonoBehaviour
     public bool pressed;
     public ButtonController button;
     private SpriteRenderer sprite;
+    public GameObject hitEffect;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class NoteScript : MonoBehaviour
         {
             if (pressed)
             {
+                Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
                 gameObject.SetActive(false);
             }
         }

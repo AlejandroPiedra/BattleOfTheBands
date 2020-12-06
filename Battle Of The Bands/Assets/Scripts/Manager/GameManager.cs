@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
                         game.player2.health -= 1 * p1damageMultiplier;
                         P2healthbar.fillAmount = game.player2.health / 100f;
                         p1buttons[i].noteHit = false;
+                        
                     }
                     else
                     {
@@ -141,8 +142,8 @@ public class GameManager : MonoBehaviour
         if (game.player2.health <= 0)
         {
             gameOverText.color = Color.white;
-            gameOverButton.gameObject.SetActive(true);
             gameOverText.text = "Player 1 Rocks!!!";
+            gameOverButton.gameObject.SetActive(true);
             SetUpWin();
         }
 
@@ -169,7 +170,7 @@ public class GameManager : MonoBehaviour
     {
         SetUpWin();
         gameOverText.color = Color.red;
-        gameOverText.text = player.tag + " SOLO THEM!!!";
+        gameOverText.text = player.tag + " SOLO!!!";
         if (player.tag == "Player1")
         {
             foreach (ButtonController button in p1buttons)
@@ -197,8 +198,8 @@ public class GameManager : MonoBehaviour
 
     private void SetUpWin()
     {
-        gameOver = true;
         song.Stop();
+        gameOver = true;
         noteScroller.startScroll = false;
         gameOverPanel.gameObject.SetActive(true);
     }
