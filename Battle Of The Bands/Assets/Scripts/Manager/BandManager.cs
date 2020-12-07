@@ -29,27 +29,27 @@ public class BandManager : MonoBehaviour
         if (game.player1.playerBand == PlayerScript.Band.ASIA && game.player2.playerBand == PlayerScript.Band.NORTHAMERICA)
         {
             
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(3);
         }
         else if (game.player1.playerBand == PlayerScript.Band.ASIA && game.player2.playerBand == PlayerScript.Band.SOUTHAMERICA)
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(4);
         }
         else if (game.player1.playerBand == PlayerScript.Band.NORTHAMERICA && game.player2.playerBand == PlayerScript.Band.ASIA)
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(5);
         }
         else if (game.player1.playerBand == PlayerScript.Band.NORTHAMERICA && game.player2.playerBand == PlayerScript.Band.SOUTHAMERICA)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
         else if (game.player1.playerBand == PlayerScript.Band.SOUTHAMERICA && game.player2.playerBand == PlayerScript.Band.ASIA)
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(6);
         }
         else if (game.player1.playerBand == PlayerScript.Band.SOUTHAMERICA && game.player2.playerBand == PlayerScript.Band.NORTHAMERICA)
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(7);
         }
     }
 

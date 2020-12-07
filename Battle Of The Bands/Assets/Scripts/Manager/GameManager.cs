@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,11 +8,14 @@ public class GameManager : MonoBehaviour
 {
     public GameScriptableObject game;
     public AudioSource song;
+    public float startTime = 3.9f;
     public bool startPlaying;
     public bool gameOver;
     public NoteScroller noteScroller;
     public RectTransform gameOverPanel;
+    public RectTransform startGamePanel;
     public Text gameOverText;
+    public Text startTimeText;
     public Button gameOverButton;
     public ButtonController[] p1buttons;
     public ButtonController[] p2buttons;
@@ -28,7 +32,7 @@ public class GameManager : MonoBehaviour
     public int p2multiplierTracker;
     public int[] p2multiplierArray;
     public Text p2comboDisplay;
-
+    private int time;
 
     void Start()
     {
@@ -38,15 +42,20 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        startTime -= Time.deltaTime;
+        time = (int)Convert.ToInt32(startTime);
         //Starts Game
         if (!startPlaying)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            startGamePanel.gameObject.SetActive(true);
+            startTimeText.text = time.ToString();
+           if(time <= 0)
             {
+                startGamePanel.gameObject.SetActive(false);
                 startPlaying = true;
                 noteScroller.startScroll = true;
                 song.Play();
-            }
+            }  
         }
 
         if (!gameOver)
@@ -129,7 +138,6 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        
 
         //Check Win/Loss
         if (game.player1.health <= 0)

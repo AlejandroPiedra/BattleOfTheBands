@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroScene.unity
     guid: 3d75e3eb0435ffc4faedb0797c520abe
   - enabled: 1
-    path: Assets/Scenes/SettingScene.unity
-    guid: 1097c1254c1789843937dbe8a8f7d763
-  - enabled: 1
     path: Assets/Scenes/BandSelect.unity
     guid: 4f3a8f192045a8c40a316a35ffaf7708
   - enabled: 1
