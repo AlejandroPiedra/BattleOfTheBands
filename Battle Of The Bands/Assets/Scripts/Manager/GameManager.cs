@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
                             }
                         }
                         game.player2.health -= 1 * p1damageMultiplier;
-                        P2healthbar.fillAmount = game.player2.health / 100f;
+                        P2healthbar.fillAmount = game.player2.health / 500f;
                         p1buttons[i].noteHit = false;
                         
                     }
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
                         p1multiplierTracker = 0;
                         p1damageMultiplier = 1;
                         game.player1.health -= 1;
-                        P1healthbar.fillAmount = game.player1.health / 100f;
+                        P1healthbar.fillAmount = game.player1.health / 500f;
                         p1comboDisplay.text = "x" + p1damageMultiplier;
                     }
                 }
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
                     p1damageMultiplier = 1;
                     p1comboDisplay.text = "x" + p1damageMultiplier;
                     game.player1.health -= 1;
-                    P1healthbar.fillAmount = game.player1.health / 100f;
+                    P1healthbar.fillAmount = game.player1.health / 500f;
                 }
 
                 if (Input.GetKeyDown(p2buttons[i].keyPressed))
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
                             }
                         }
                         game.player1.health -= 1 * p2damageMultiplier;
-                        P1healthbar.fillAmount = game.player1.health / 100f;
+                        P1healthbar.fillAmount = game.player1.health / 500f;
                         p2buttons[i].noteHit = false;
                     }
                     else
@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
                         p2multiplierTracker = 0;
                         p2damageMultiplier = 1;
                         game.player2.health -= 1;
-                        P2healthbar.fillAmount = game.player2.health / 100f;
+                        P2healthbar.fillAmount = game.player2.health / 500f;
                         p2comboDisplay.text = "x" + p2damageMultiplier;
                     }
                 }
@@ -134,7 +134,7 @@ public class GameManager : MonoBehaviour
                     p2damageMultiplier = 1;
                     p2comboDisplay.text = "x" + p2damageMultiplier;
                     game.player2.health -= 1;
-                    P2healthbar.fillAmount = game.player2.health / 100f;
+                    P2healthbar.fillAmount = game.player2.health / 500f;
                 }
             }
         }
@@ -185,8 +185,8 @@ public class GameManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(button.keyPressed))
                 {
-                    game.player2.health -= 1;
-                    P2healthbar.fillAmount = game.player2.health / 100f;
+                    game.player2.health -= 25;
+                    P2healthbar.fillAmount = game.player2.health / 500f;
                 }
             }
         }
@@ -197,8 +197,8 @@ public class GameManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(button.keyPressed))
                 {
-                    game.player1.health -= 1;
-                    P1healthbar.fillAmount = game.player1.health / 100f;
+                    game.player1.health -= 25;
+                    P1healthbar.fillAmount = game.player1.health / 500f;
                 }
             }
         }
