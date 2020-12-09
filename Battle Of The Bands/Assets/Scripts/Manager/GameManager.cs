@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
     public RectTransform startGamePanel;
     public Text gameOverText;
     public Text startTimeText;
-    public Button gameOverButton;
+    public Button titleScreenButton;
+    public Button bandScreenButton;
     public ButtonController[] p1buttons;
     public ButtonController[] p2buttons;
     public PlayerScript player1;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
     {
         game.player1 = player1;
         game.player2 = player2;
+        Time.timeScale = 1f;
     }
 
     void Update()
@@ -49,8 +51,10 @@ public class GameManager : MonoBehaviour
         {
             startGamePanel.gameObject.SetActive(true);
             startTimeText.text = time.ToString();
+            gameOver = true;
            if(time <= 0)
             {
+                gameOver = false;
                 startGamePanel.gameObject.SetActive(false);
                 startPlaying = true;
                 noteScroller.startScroll = true;
@@ -144,19 +148,21 @@ public class GameManager : MonoBehaviour
         {
             gameOverText.color = Color.white;
             gameOverText.text = "Player 2 Rocks!!!";
-            gameOverButton.gameObject.SetActive(true);
+            bandScreenButton.gameObject.SetActive(true);
+            titleScreenButton.gameObject.SetActive(true);
             SetUpWin();
         }
         if (game.player2.health <= 0)
         {
             gameOverText.color = Color.white;
             gameOverText.text = "Player 1 Rocks!!!";
-            gameOverButton.gameObject.SetActive(true);
+            bandScreenButton.gameObject.SetActive(true);
+            titleScreenButton.gameObject.SetActive(true);
             SetUpWin();
         }
 
         //Check For a Solo
-        if (!song.isPlaying)
+        if (!song.isPlaying && Time.timeScale == 1f)
         {
             if (game.player1.health > 0 && game.player2.health > 0)
             {
