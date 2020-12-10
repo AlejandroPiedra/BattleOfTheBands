@@ -493,7 +493,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7e17c647be9ac95429a81b71dc077925, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -751,6 +751,7 @@ GameObject:
   - component: {fileID: 1263365254}
   - component: {fileID: 1263365253}
   - component: {fileID: 1263365252}
+  - component: {fileID: 1263365255}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -859,6 +860,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263365250}
   m_CullTransparentMesh: 0
+--- !u!114 &1263365255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263365250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493d9680d584e884784a95c5e5bb46d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1562979252
 GameObject:
   m_ObjectHideFlags: 0
